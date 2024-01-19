@@ -1,5 +1,6 @@
 import telebot 
-from telebot import types, util 
+from telebot import types, util
+from settings.py TG_TOKEN
  
 class User: 
     def __init__(self, id, name): 
@@ -9,7 +10,7 @@ class User:
  
 users = {} 
  
-client = telebot.TeleBot('5911761685:AAEBXnW9MWLrY6hckAnN2V-xXrXCj1RIWac') 
+client = telebot.TeleBot(TG_TOKEN) 
        
 def check_user(func):
     def wrapper(*args, **kwargs):
